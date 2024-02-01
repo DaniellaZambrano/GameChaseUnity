@@ -44,6 +44,12 @@ public class Player : MonoBehaviour
         PlayerJump();
     }
 
+   /* private void FixedUpdate()
+    {
+        PlayerJump();
+    }
+   */
+
     void PlayerMoveKeyboard()
     {
         movementX = Input.GetAxisRaw("Horizontal");
