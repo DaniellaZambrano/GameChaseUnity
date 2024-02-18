@@ -25,28 +25,31 @@ public class MonsterSpawner : MonoBehaviour
     }
     IEnumerator SpawnMonsters() 
     {
-        yield return new WaitForSeconds(Random.Range(1, 5));
+        while (true) 
+        { 
+            yield return new WaitForSeconds(Random.Range(1, 5));
 
-        randomIndex = Random.Range(0, monsterReference.Length);
-        randomSide = Random.Range(0, 2);
+            randomIndex = Random.Range(0, monsterReference.Length);
+            randomSide = Random.Range(0, 2);
 
-        spawnedMonster = Instantiate(monsterReference[randomIndex]);
+            spawnedMonster = Instantiate(monsterReference[randomIndex]);
 
 
-        // left side
-        if (randomSide == 0) 
-        {
-            spawnedMonster.transform.position = leftPos.position;
-            spawnedMonster.GetComponent<Monster>().speed = Random.Range(4,10);
+            // left side
+            if (randomSide == 0) 
+            {
+                spawnedMonster.transform.position = leftPos.position;
+                spawnedMonster.GetComponent<Monster>().speed = Random.Range(4,10);
         
-        }
-        //rigth
-        else
-        {
-            spawnedMonster.transform.position = rightPos.position;
-            spawnedMonster.GetComponent<Monster>().speed = -Random.Range(4, 10);
-            spawnedMonster.transform.localScale = new Vector3(-1f, 1f,1f);
-        }
+            }
+            //rigth
+            else
+            {
+                spawnedMonster.transform.position = rightPos.position;
+                spawnedMonster.GetComponent<Monster>().speed = -Random.Range(4, 10);
+                spawnedMonster.transform.localScale = new Vector3(-1f, 1f,1f);
+            }
+        } // while loop
 
     }
     

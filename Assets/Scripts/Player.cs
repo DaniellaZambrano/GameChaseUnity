@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     private bool isGrounded = false;
     private string GROUND_TAG = "Ground";
 
+    private string ENEMY_TAG = "Enemy";
+
     private void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
@@ -85,11 +87,32 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Ojo Collision2D
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(GROUND_TAG))
         {
             isGrounded = true;
+        }
+        
+        // One method
+        if (collision.gameObject.CompareTag(ENEMY_TAG))
+        {
+            Destroy(gameObject);
+        }    
+
+
+    }
+
+
+    // Ojo COLLIDER
+    // Second method same effect
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Things pass throw they
+        if (collision.CompareTag(ENEMY_TAG))
+        {
+            Destroy(gameObject);
         }
     }
 
