@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
 
     private string PLAYER_TAG = "Player";
 
-    [SerializeField]
+    //[SerializeField]
     private float minX = -60.85f;
     private float maxX = 60.85f;
 
