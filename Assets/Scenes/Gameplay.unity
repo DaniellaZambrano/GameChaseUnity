@@ -7654,6 +7654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Players_8
       objectReference: {fileID: 0}
+    - target: {fileID: 2800057088650190272, guid: 05f5c63bbca6a53449a79459d6d9815b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7670,6 +7674,10 @@ PrefabInstance:
     - target: {fileID: 3997910838319120040, guid: 8b357e05b8c53024abcc4840c0de21dd, type: 3}
       propertyPath: m_Name
       value: Players_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997910838319120040, guid: 8b357e05b8c53024abcc4840c0de21dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5457459218723612825, guid: 8b357e05b8c53024abcc4840c0de21dd, type: 3}
       propertyPath: m_LocalPosition.x
